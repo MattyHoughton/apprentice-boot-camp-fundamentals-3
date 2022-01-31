@@ -30,6 +30,6 @@ public class DefaultTaxCalculator extends TaxCalculator {
         } else if (vehicle.getCo2Emissions() == 256) {
             return 2070;
         }
-        return -1;
+        return 0;
     }
 }
