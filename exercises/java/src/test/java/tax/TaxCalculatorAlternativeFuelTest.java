@@ -10,7 +10,6 @@ import static java.time.Month.JANUARY;
 import static org.assertj.core.api.Assertions.assertThat;
 import static tax.FuelType.ALTERNATIVE_FUEL;
 import static tax.FuelType.ELECTRIC;
-
 @Ignore
 public class TaxCalculatorAlternativeFuelTest {
 
