@@ -1,7 +1,21 @@
 package tax;
 
 public class DefaultTaxCalculator extends TaxCalculator {
+
+    private boolean firstYear = false;
+    private boolean firstYearExpensive = false;
+
+    public DefaultTaxCalculator(boolean firstYear, boolean firstYearExpensive) {
+        this.firstYear = firstYear;
+        this.firstYearExpensive = firstYearExpensive;
+    }
+
+    public DefaultTaxCalculator() {
+
+    }
+
     public int calculateTax(Vehicle vehicle) {
+
         if(vehicle.getFuelType() == FuelType.PETROL) {
             if (vehicle.getCo2Emissions() <= 0) {
                 return 0;
