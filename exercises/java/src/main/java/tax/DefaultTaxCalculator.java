@@ -3,7 +3,7 @@ package tax;
 public class DefaultTaxCalculator extends TaxCalculator {
 
     private boolean firstYear = false;
-    private boolean firstYearExpensive = false;
+    private boolean firstYearExpensive = true;
 
     public DefaultTaxCalculator(boolean firstYear, boolean firstYearExpensive) {
         this.firstYear = firstYear;
