@@ -31,7 +31,7 @@ public class DefaultTaxCalculator extends TaxCalculator {
                 return 2070;
             }
         }
-        if(vehicle.getFuelType() == FuelType.ALTERNATIVE_FUEL){
+        if(vehicle.getFuelType() == FuelType.ALTERNATIVE_FUEL || vehicle.getFuelType() == FuelType.ELECTRIC){
             int co2Emissions = vehicle.getCo2Emissions();
             if(co2Emissions <= 50){
                 return 0;
@@ -51,6 +51,12 @@ public class DefaultTaxCalculator extends TaxCalculator {
                 return 505;
             } else if (co2Emissions <= 190){
                 return 820;
+            } else if (co2Emissions <= 225){
+                return 1230;
+            } else if (co2Emissions <= 255){
+                return 1750;
+            } else {
+                return 2060;
             }
         }
         return -1;

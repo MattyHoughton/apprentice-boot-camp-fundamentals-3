@@ -81,28 +81,24 @@ public class TaxCalculatorAlternativeFuelTest {
     }
 
     @Test
-    @Ignore
     public void firstYearsTaxForAlternativeFuel_191_to_225_grams_co2() {
         Vehicle vehicle = new Vehicle(225, ALTERNATIVE_FUEL, FIRST_OF_JAN_2019, 20000);
         assertThat(taxCalculator.calculateTax(vehicle)).isEqualTo(1230);
     }
 
     @Test
-    @Ignore
     public void firstYearsTaxForAlternativeFuel_226_to_255_grams_co2() {
         Vehicle vehicle = new Vehicle(255, ALTERNATIVE_FUEL, FIRST_OF_JAN_2019, 20000);
         assertThat(taxCalculator.calculateTax(vehicle)).isEqualTo(1750);
     }
 
     @Test
-    @Ignore
     public void firstYearsTaxForAlternativeFuel_over_255_grams_co2() {
         Vehicle vehicle = new Vehicle(256, ALTERNATIVE_FUEL, FIRST_OF_JAN_2019, 20000);
         assertThat(taxCalculator.calculateTax(vehicle)).isEqualTo(2060);
     }
 
     @Test
-    @Ignore
     public void firstYearsTaxForElectric() {
         Vehicle vehicle = new Vehicle(0, ELECTRIC, FIRST_OF_JAN_2019, 20000);
         assertThat(taxCalculator.calculateTax(vehicle)).isEqualTo(0);
